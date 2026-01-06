@@ -77,9 +77,6 @@ update_on_boot: false
 💾 Savegames
 Savegames are stored at:
 
-swift
-Code kopieren
-/share/palworld/server/Pal/Saved/
 They persist across:
 
 Restarts
