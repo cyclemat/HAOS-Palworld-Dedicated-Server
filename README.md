@@ -31,8 +31,6 @@ Everything can be managed easily via **Samba** or the **File Editor**.
 ├── saves/ # Savegames
 └── logs/ # Server logs
 
-csharp
-Code kopieren
 
 **Main configuration file:**
 
