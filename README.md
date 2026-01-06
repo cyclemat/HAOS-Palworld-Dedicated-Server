@@ -61,7 +61,6 @@ External ports can be configured in the Home Assistant add-on **Network** sectio
 
 If enabled:
 
-```yaml
 update_on_boot: true
 On every start or restart:
 
