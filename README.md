@@ -1,9 +1,4 @@
 <h1 align="center">🦖 Palworld Dedicated Server (SteamCMD)</h1>
-
-<p align="center">
-  <img src="(https://github.com/cyclemat/HAOS-Palworld-Dedicated-Server/blob/main/palworld_steamcmd_server/logo.png" width="800">
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Home%20Assistant-OS-blue?logo=homeassistant">
   <img src="https://img.shields.io/badge/Architecture-amd64-success">
