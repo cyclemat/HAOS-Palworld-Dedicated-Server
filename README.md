@@ -1,4 +1,4 @@
-<h1 align="center">🦖 Palworld Dedicated Server (SteamCMD)</h1>
+<h1 align="center">🦖 Palworld Dedicated Server based on (SteamCMD)</h1>
 
 <p align="center">
   A Home Assistant OS add-on to run a fully host-based Palworld Dedicated Server using SteamCMD.
