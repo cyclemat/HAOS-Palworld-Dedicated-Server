@@ -24,20 +24,17 @@ Everything can be managed easily via **Samba** or the **File Editor**.
 ## 📁 Directory Structure
 
 /share/palworld/
-├── steam/ # SteamCMD, cache & downloads
-├── server/ # Palworld server files
-├── config/
-│ └── PalWorldSettings.ini
-├── saves/ # Savegames
-└── logs/ # Server logs
+                  ├── steam/ # SteamCMD, cache & downloads
+                  ├── server/ # Palworld server files
+                  ├── config/
+                  │          └── PalWorldSettings.ini
+                  ├── saves/ # Savegames
+                  └── logs/ # Server logs
 
 
 **Main configuration file:**
 
 /share/palworld/config/PalWorldSettings.ini
-
-yaml
-Code kopieren
 
 ---
 
@@ -85,8 +82,6 @@ Configuration and savegames remain untouched
 
 Disable updates:
 
-yaml
-Code kopieren
 update_on_boot: false
 💾 Savegames
 Savegames are stored at:
