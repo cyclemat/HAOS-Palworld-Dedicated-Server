@@ -1,7 +1,7 @@
 <h1 align="center">🦖 Palworld Dedicated Server (SteamCMD)</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cyclemat/palworld_steamcmd_server/main/logo.png" width="800">
+  <img src="(https://github.com/cyclemat/HAOS-Palworld-Dedicated-Server/blob/main/palworld_steamcmd_server/logo.png" width="800">
 </p>
 
 <p align="center">
