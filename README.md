@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="logo.png" alt="Palworld Dedicated Server for HAOS" width="800">
-</p>
-
 <h1 align="center">🦖 Palworld Dedicated Server (SteamCMD)</h1>
 
 <p align="center">
