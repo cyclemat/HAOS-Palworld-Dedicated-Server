@@ -1,116 +1,104 @@
-# 🦖 Palworld Dedicated Server (SteamCMD) – Home Assistant Add-on
+# 🦖 Palworld Dedicated Server (SteamCMD)
 
-Dieses Add-on betreibt einen **Palworld Dedicated Server** unter **Home Assistant OS**.  
-**SteamCMD, Serverdateien, Konfiguration und Savegames liegen vollständig auf dem Host** unter `/share` und sind jederzeit per **Samba** oder **File Editor** bearbeitbar.
+![Home Assistant OS](https://img.shields.io/badge/Home%20Assistant-OS-blue)
+![Architecture](https://img.shields.io/badge/Architecture-amd64-blue)
+![SteamCMD](https://img.shields.io/badge/SteamCMD-Enabled-orange)
+![Status](https://img.shields.io/badge/Status-Beta-orange)
+
+A Home Assistant OS add-on to run a fully host-based **Palworld Dedicated Server**
+using **SteamCMD**.
 
 ---
 
-## 📁 Verzeichnisstruktur
+## 🚀 Overview
 
-Alle Daten dieses Add-ons befinden sich unter:
+This add-on runs a **Palworld Dedicated Server** directly on **Home Assistant OS**.
 
-```
+All data is stored entirely on the host under `/share`, including:
+
+- SteamCMD
+- Palworld server files
+- Configuration
+- Savegames
+
+No additional server, virtual machine, or external host is required.
+
+---
+
+## ✨ Features
+
+- Official Palworld Dedicated Server (Steam App ID `2394010`)
+- Automatic updates via SteamCMD
+- Persistent data storage under `/share`
+- Runs directly on Home Assistant OS
+- Easy installation via the Home Assistant Add-on Store
+
+---
+
+## 📦 Installation
+
+1. Open **Home Assistant**
+2. Go to **Settings → Add-ons → Add-on Store**
+3. Add the following repository:
+https://github.com/cyclemat/HAOS---Game-Servers
+
+yaml
+Code kopieren
+4. Install **Palworld Dedicated Server**
+5. Start the add-on
+
+---
+
+## 📁 Data Location
+
+All server data is stored persistently under:
+
+```text
 /share/palworld/
-├── steam/              # SteamCMD, Cache & Downloads
-├── server/             # Palworld Serverdateien
-├── config/
-│   └── PalWorldSettings.ini
-├── saves/              # Savegames
-└── logs/               # Server-Logs
-```
+├── server/      ← Palworld server files
+├── config/      ← Configuration files
+└── savegames/   ← World save data
+You can access this directory from Windows via:
 
-**Wichtige Konfigurationsdatei:**
+php-template
+Code kopieren
+\\<HOME_ASSISTANT_IP>\share\palworld\
+🎮 Server Configuration
+Server configuration is done via configuration files.
 
-```
+Main configuration file:
+
+text
+Code kopieren
 /share/palworld/config/PalWorldSettings.ini
-```
+After editing the configuration file, restart the add-on for changes to take effect.
 
----
+🌐 Network Ports
+Port	Protocol	Description
+8211	UDP	Game server
+27015	UDP	Query port
 
-## ⚙️ Konfiguration
+Make sure these ports are forwarded on your router if you want external players to join.
 
-### PalWorldSettings.ini
-- Wird beim **ersten Start automatisch erzeugt**
-- Kann danach **frei angepasst** werden
-- Wird **niemals überschrieben**, auch nicht bei Updates
+⚙️ Add-on Options
+Option	Description
+update_on_start	Automatically update the server on add-on start
 
-### Änderungen übernehmen
-1. Add-on **stoppen**
-2. `PalWorldSettings.ini` bearbeiten
-3. Add-on **starten**
+❤️ Support & Donations
+This project is developed and maintained in my free time.
 
----
+If you enjoy this add-on and find it useful,
+I would really appreciate a small donation to support my work and ongoing development.
 
-## 🌐 Netzwerk / Ports
+👉 Donate via PayPal http://paypal.me/cyclemat
 
-Der Server nutzt intern feste Ports:
+Donations are completely optional – thank you very much!
 
-| Zweck        | Port  | Protokoll |
-|-------------|-------|-----------|
-| Game Port   | 8211  | UDP       |
-| Query Port | 27015 | UDP       |
+🧑‍💻 Maintainer
+Author: CyCleMat
 
-**Externe Ports** werden im Add-on unter **„Netzwerk“** konfiguriert  
-(z. B. bei Portweiterleitungen oder mehreren Servern).
+GitHub: https://github.com/cyclemat
 
----
-
-## 🔄 Updates (SteamCMD)
-
-Wenn in der Add-on-Konfiguration folgendes gesetzt ist:
-
-```yaml
-update_on_boot: true
-```
-
-wird bei **jedem Start oder Neustart**:
-
-- der Palworld Server automatisch aktualisiert
-- die Installation validiert (`validate`)
-- die Konfiguration und Savegames bleiben unangetastet
-
-### Updates deaktivieren
-```yaml
-update_on_boot: false
-```
-
----
-
-## 💾 Savegames
-
-Savegames befinden sich unter:
-
-```
-/share/palworld/server/Pal/Saved/
-```
-
-Sie bleiben erhalten bei:
-- Neustarts
-- Updates
-- Add-on-Neuinstallation
-
----
-
-## 🛠️ Fehlerbehebung
-
-### Änderungen greifen nicht
-- Add-on wurde nicht neu gestartet
-- Falsche `PalWorldSettings.ini` bearbeitet
-
-### Neue Palworld-Version bringt neue Optionen
-- Neue Optionen einfach manuell in die INI einfügen
-- Unbekannte oder veraltete Optionen werden ignoriert
-
----
-
-## ✅ Vorteile dieses Add-ons
-
-- SteamCMD vollständig auf dem Host
-- Volle Kontrolle über Server & Konfiguration
-- Keine Home-Assistant-Schema-Limits
-- Updatesicher
-- Ideal für Samba & File Editor
-- Mehrere Server parallel möglich
-
----
-
+📜 Disclaimer
+This add-on is not affiliated with or endorsed by Pocketpair or Palworld developers.
+All trademarks and game content belong to their respective owners.
