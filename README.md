@@ -179,3 +179,8 @@ Updates will not overwrite your settings
 📜 License & Disclaimer
 This project is not affiliated with or endorsed by Pocketpair.
 Palworld is a trademark of its respective owners.
+
+
+This project is developed and maintained in my free time.
+If it helps you and you like my work, I would be very happy about a small donation via PayPal to support further development.
+Paypal: CyCleMat@googlemail.com
